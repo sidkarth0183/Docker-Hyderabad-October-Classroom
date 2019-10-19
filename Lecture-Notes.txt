@@ -1,0 +1,148 @@
+DOCKER
+===========================
+What is Docker?
+    Container mgmt tool
+    Free
+    Open Source
+    Version
+        Community
+        Enterprise
+    By Docker
+    Written in Go
+--------------------
+    How you run APP?
+        20 YEARS In PAST- PHYSCIAL SERVER
+        NOW - VMs
+        NOW ONWARDS
+------------
+WHY VM?
+    Reducing a Cost
+    Avoid a Wasteage
+    Speed of running app.
+--------------------------
+10 APP -------> 10 PS
+----------------------------
+10 APP -------> 10 VMs
+    WHY?
+===================================
+What is container?
+    Container is USER SPACE (USER NS)
+                With their own
+                - MOUNT (MNT NS) -----------------> FROM IMAGE
+                - Network (NET NS)
+                - Process Map (PMAP ns)
+    with a help of DOCKER.
+
+Container is a light weight package containing app.
+========================================
+Architecure of Docker
+---------------------
+
+Humen -> Docker Client --API ---> Docker Daemon --> Kernal 
+        ------------Docker Engine---------------
+
+
+
+Docker Components?
+--- Docker Engine
+--- Docker Image
+            OS LIB + Dependent Soft + Apps
+--- Registry (https://hub.docker.com/)
+        - repository
+
+--- Container
+    From Image you create container 
+    One Image can create millions of container in one second.
+
+    How to install Docker?
+    https://www.devopsschool.com/tutorial/docker/install-config/docker-install-commuityedition-centos-rhel.html
+
+[root@ip-172-31-16-168 ec2-user]# history
+    1  sudo yum install -y yum-utils device-mapper-persistent-data lvm2
+    2  sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+    3  sudo yum install –y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+    4  sudo yum-config-manager --enable rhui-REGION-rhel-server-extras
+    5  sudo yum install -y docker-ce
+    6  sudo yum install -y docker-ce
+    7  docker -v
+    8  sudo systemctl enable docker
+    9  sudo systemctl start docker
+   10  docker info
+   11  history
+
+15.206.81.84 - Rajesh
+13.235.248.167 - Asha
+15.206.100.150 - Karthik
+13.235.27.4 - Monish
+13.127.159.143 - Saujanya
+13.233.238.254 - Nagesh
+35.154.126.8  - Ravi
+13.233.134.69 - Shiva
+
+User name -ec2-user 
+
+Docker needs root
+username should be a part of group called "docker"
+
+
+[root@ip-172-31-16-168 ec2-user]# which docker
+/bin/docker
+[root@ip-172-31-16-168 ec2-user]# ps -eaf | grep docker
+root     10786     1  0 08:03 ?        00:00:00 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+root     10963  9692  0 08:04 pts/0    00:00:00 grep --color=auto docker
+[root@ip-172-31-16-168 ec2-user]#
+
+
+WHAT APP YOU WANT TO RUN?
+nginx
+tomcat
+apache
+php
+wl
+-------------------
+jenkins
+    --- Dev on javas
+    --- JRE
+    ----WEB -   NODE
+        8080    50000
+https://hub.docker.com/_/jenkins
+
+Workflow of Docker 
+===========================
+Pull -> Create -> Start -> Stop -> Restart -> Pause -> Unpause  -> Stop - >Delete
+-----------------------
+        RUN
+ 10  docker info
+   11  history
+   12  clear
+   13  which docker
+   14  ps -eaf | grep docker
+   15  clear
+   16  docker pull jenkins
+   17  docker images
+   18  docker ps
+   19  docker ps -a
+   20  docker create jenkins
+   21  docker ps -a
+   22  docker ps
+   23  docker ps -a
+   24  clear
+   25  docker ps -a
+   26  docker start eacca655ebfb
+   27  docker ps -a
+   28  docker ps -a
+   29  docker stop eacca655ebfb
+   30  docker ps -a
+   31  docker restop eacca655ebfb
+   32  docker restart eacca655ebfb
+   33  docker ps -a
+   34  docker pause eacca655ebfb
+   35  docker ps -a
+   36  docker unpause eacca655ebfb
+   37  docker ps -a
+   38  clear
+   39  docker stop eacca655ebfb
+   40  docker ps -a
+   41  docker rm eacca655ebfb
+   42  docker ps -a
+   43  history
