@@ -80,6 +80,8 @@ Docker Components?
 13.233.134.69 - Shiva
 
 User name -ec2-user 
+PPK - https://www.devopsschool.com/notes/docker/2019/
+rajesh-mumbai.ppk
 
 Docker needs root
 username should be a part of group called "docker"
